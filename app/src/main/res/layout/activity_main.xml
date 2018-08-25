@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/id_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/id_detect"
+        android:src="@drawable/face" />
+
+    <Button
+        android:id="@+id/id_detect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="一级大眼" />
+
+    <Button
+        android:id="@+id/id_getImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="选择图片" />
+
+    <FrameLayout
+        android:id="@+id/id_waiting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/id_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/id_age_and_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hint"
+            android:drawableLeft="@drawable/male"
+            android:gravity="center"
+            android:text="123"
+            android:textColor="#ffff00ff"
+            android:textSize="22sp"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bt_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/id_detect"
+        android:text="二级大眼" />
+
+    <Button
+        android:id="@+id/bt_small1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="一级瘦脸" />
+
+    <Button
+        android:id="@+id/bt_small2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/bt_small1"
+        android:text="二级瘦脸" />
+
+</RelativeLayout>
